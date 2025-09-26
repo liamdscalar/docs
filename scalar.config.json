@@ -3,6 +3,10 @@
     {
       "name": "API Reference",
       "path": "./docs/api-reference/openapi.yaml"
+    },
+    {
+      "name": "API Reference 2",
+      "path": "./docs/api-reference/openapi.yaml"
     }
   ],
   "guides": [
