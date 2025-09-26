@@ -1,6 +1,6 @@
 # Introduction
 
-Welcome to Scalar!
+Welcome to Liam's Docs!
 
 ## Getting Ready
 ::scalar-page-link{filepath="docs/guides/quick-start/details/quickstart.md" title="Start here" description="Follow the quickstart guide."}
