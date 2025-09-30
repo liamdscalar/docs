@@ -149,8 +149,6 @@
 
     "isPrivate": true,
 
-    "accessGroups": ["engineering-team", "qa-team"],
-
     "layout": {
       "toc": true,
       "header": false
