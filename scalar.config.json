@@ -1,55 +1,203 @@
 {
-  "references": [
-    {
-      "name": "API Reference",
-      "path": "./docs/api-reference/openapi.yaml"
-    },
-    {
-      "name": "API Reference 2",
-      "path": "./docs/api-reference/openapi.yaml"
+  "$schema": "https://cdn.scalar.com/schema/scalar-config-next.json",
+  "scalar": "2.0.0",
+
+  "root": "./",
+
+  "info": {
+    "title": "A document",
+    "description": "A scalar docs config",
+    "version": "1.0.0"
+  },
+
+  "publishOnMerge": true,
+
+  "cssString": ".title { color: 'red' }",
+
+  "cssFiles": ["./example.css"],
+
+  "components": {
+    "someSharedObject": {
+      "name": "hi"
     }
-  ],
-  "guides": [
-    {
-      "name": "Quick Start",
-      "sidebar": [
+  },
+
+  "navigation": {
+    "tabs": [
+      {
+        "title": "Home",
+        "url": "/",
+        "icon": "home"
+      }
+    ],
+
+    "header": [
+      {
+        "title": "Home",
+        "url": "/",
+        "icon": "home"
+      },
+      {
+        "title": "APIs",
+        "children": [
+          {
+            "title": "Element API",
+            "url": "/earth-api",
+            "icon": "earth"
+          },
+          {
+            "title": "About",
+            "url": "/about"
+          }
+        ]
+      }
+    ],
+
+    "sidebar": [
+      {
+        "title": "Home",
+        "url": "/",
+        "icon": "homepage"
+      },
+      {
+        "title": "APIs",
+        "children": [
+          {
+            "title": "Element API",
+            "url": "/earth-api",
+            "icon": "earth"
+          },
+          {
+            "title": "About",
+            "url": "/about"
+          }
+        ]
+      }
+    ],
+
+    "routes": {
+      "/": {
+        "title": "Home",
+        "type": "group",
+        "children": {
+          "/": {
+            "type": "page",
+            "filepath": "pages/index.md",
+            "title": "Home"
+          },
+          "/terms": "./pages/terms.md",
+          "/privacy": "./pages/privacy.md",
+          "/saturn-api": {
+            "type": "openapi",
+            "title": "Element API",
+            "url": "https://example.com/saturn.yaml"
+          }
+        }
+      },
+      "/earth-api": {
+        "type": "openapi",
+        "title": "Element API",
+        "filepath": "api/earth.yaml",
+        "icon": "earth",
+        "config": {
+          "some-reference": {
+            "some-property": "example"
+          }
+        }
+      },
+      "/moon-api": {
+        "type": "openapi",
+        "title": "Element API",
+        "url": "https://example.com/moon.yaml"
+      },
+      "/sun-api": {
+        "type": "openapi",
+        "title": "Element API",
+        "slug": "sun-api",
+        "namespace": "@sun",
+        "versions": ["1.0.0"]
+      },
+      "/link": {
+        "type": "link",
+        "title": "Google",
+        "url": "https://www.google.com",
+        "icon": "earth"
+      },
+      "/about": {
+        "type": "page",
+        "filepath": "pages/about.md",
+        "title": "Fire",
+        "layout": {
+          "toc": false,
+          "header": false,
+          "sidebar": false,
+          "tabs": false
+        },
+        "meta": {
+          "og:title": "Fire",
+          "og:description": "Fire is a fire"
+        },
+        "script": ["/script.js"],
+        "css": ["/style.css"]
+      }
+    }
+  },
+  "siteConfig": {
+    "customDomain": "docs.example.com",
+
+    "subdomain": "exampleapi",
+
+    "loginPortal": "internal-portal",
+
+    "isPrivate": true,
+
+    "accessGroups": ["engineering-team", "qa-team"],
+
+    "layout": {
+      "toc": true,
+      "header": false
+    },
+
+    "meta": {
+      "favicon": "https://cdn.example.com/assets/favicon.ico",
+      "ogImage": "https://cdn.example.com/assets/og-image.png",
+      "title": "Example API Documentation",
+      "description": "Comprehensive API docs for Example's public and private APIs."
+    },
+
+    "theme": "purple",
+
+    "logo": {
+      "darkMode": "https://cdn.example.com/assets/logo-dark.png",
+      "lightMode": "https://cdn.example.com/assets/logo-light.png"
+    },
+
+    "footer": {
+      "filepath": "./footer.html",
+
+      "html": "<p>© 2025 Example Inc. All rights reserved.</p>",
+
+      "css": "p { font-size: 12px; color: #666; }",
+
+      "belowSidebar": true
+    },
+
+    "scripts": {
+      "head": "console.log('Head script loaded');",
+      "body": "console.log('Body script loaded');"
+    },
+
+    "routing": {
+      "redirects": [
         {
-          "name": "Getting Started with Scalar",
-          "type": "folder",
-          "icon": "rocket",
-          "children": [
-            { "path": "docs/guides/quick-start/introduction.md", "type": "page", "name": "Overview" },
-            { "path": "docs/guides/quick-start/details/quickstart.md", "type": "page", "name": "Quickstart" },
-            { "path": "docs/guides/quick-start/details/development.md", "type": "page", "name": "Development" }
-          ]
+          "from": "/old-path",
+          "to": "/new-path"
         },
         {
-          "name": "Customizing Your Setup",
-          "type": "folder",
-          "icon": "gear",
-          "children": [
-            { "path": "docs/guides/quick-start/details/project-settings.md", "type": "page", "name": "Project Settings" },
-            { "path": "docs/guides/quick-start/details/api-client.md", "type": "page", "name": "API Client" }
-          ]
-        },
-        {
-          "name": "Appendix",
-          "type": "folder",
-          "icon": "notebook",
-          "defaultOpen": false,
-          "children": [
-            { "path": "docs/guides/quick-start/details/scalar-cli.md", "type": "page", "name": "Scalar CLI" },
-            { "path": "docs/guides/quick-start/details/syntax.md", "type": "page", "name": "Syntax" }
-          ]
+          "from": "/v1",
+          "to": "/v2"
         }
       ]
-    }
-  ],
-  "siteConfig": {
-    "theme": "purple",
-    "logo": {
-      "darkMode": "https://scalar.com/logo-light.svg",
-      "lightMode": "https://scalar.com/logo-dark.svg"
     }
   }
 }
