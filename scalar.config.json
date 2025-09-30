@@ -147,8 +147,6 @@
 
     "subdomain": "exampleapi",
 
-    "loginPortal": "internal-portal",
-
     "isPrivate": true,
 
     "accessGroups": ["engineering-team", "qa-team"],
