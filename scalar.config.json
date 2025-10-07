@@ -121,7 +121,7 @@
       },
       "/about": {
         "type": "page",
-        "filepath": "pages/about.md",
+        "filepath": "pages/about.mdx",
         "title": "Fire",
         "layout": {
           "toc": false,
