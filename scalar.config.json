@@ -12,10 +12,6 @@
 
   "publishOnMerge": true,
 
-  "cssString": ".title { color: 'red' }",
-
-  "cssFiles": ["./example.css"],
-
   "components": {
     "someSharedObject": {
       "name": "hi"
@@ -132,13 +128,7 @@
           "header": false,
           "sidebar": false,
           "tabs": false
-        },
-        "meta": {
-          "og:title": "Fire",
-          "og:description": "Fire is a fire"
-        },
-        "script": ["/script.js"],
-        "css": ["/style.css"]
+        }
       }
     }
   },
@@ -154,13 +144,6 @@
       "header": false
     },
 
-    "meta": {
-      "favicon": "https://cdn.example.com/assets/favicon.ico",
-      "ogImage": "https://cdn.example.com/assets/og-image.png",
-      "title": "Example API Documentation",
-      "description": "Comprehensive API docs for Example's public and private APIs."
-    },
-
     "theme": "purple",
 
     "logo": {
@@ -173,14 +156,7 @@
 
       "html": "<p>© 2025 Example Inc. All rights reserved.</p>",
 
-      "css": "p { font-size: 12px; color: #666; }",
-
       "belowSidebar": true
-    },
-
-    "scripts": {
-      "head": "console.log('Head script loaded');",
-      "body": "console.log('Body script loaded');"
     },
 
     "routing": {
