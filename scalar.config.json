@@ -92,7 +92,7 @@
       },
 	  "/html": {
 	    "type": "page",
-	    "filepath": "pages/index.html",
+	    "filepath": "pages/example.html",
 	    "title": "HTML Page"
 	  },
       "/earth-api": {
