@@ -81,6 +81,11 @@
             "filepath": "pages/index.md",
             "title": "Home"
           },
+          "/html": {
+            "type": "page",
+            "filepath": "pages/index.html",
+            "title": "HTML Page"
+          },
           "/terms": "./pages/terms.md",
           "/privacy": "./pages/privacy.md",
           "/saturn-api": {
