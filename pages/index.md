@@ -1,3 +1,3 @@
 # Index page
 
-Some content
+Some content updated by the CLI
