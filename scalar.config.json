@@ -1,23 +1,18 @@
 {
   "$schema": "https://cdn.scalar.com/schema/scalar-config-next.json",
   "scalar": "2.0.0",
-
   "root": "./",
-
   "info": {
     "title": "A document",
     "description": "A scalar docs config",
     "version": "1.0.0"
   },
-
   "publishOnMerge": true,
-
   "components": {
     "someSharedObject": {
       "name": "hi"
     }
   },
-
   "navigation": {
     "tabs": [
       {
@@ -26,7 +21,6 @@
         "icon": "home"
       }
     ],
-
     "header": [
       {
         "title": "Home",
@@ -38,17 +32,12 @@
         "children": [
           {
             "title": "Element API",
-            "url": "/earth-api",
+            "url": "/galaxy-api",
             "icon": "earth"
-          },
-          {
-            "title": "About",
-            "url": "/about"
           }
         ]
       }
     ],
-
     "sidebar": [
       {
         "title": "Home",
@@ -59,18 +48,13 @@
         "title": "APIs",
         "children": [
           {
-            "title": "Element API",
-            "url": "/earth-api",
+            "title": "Galaxy API",
+            "url": "/galaxy-api",
             "icon": "earth"
-          },
-          {
-            "title": "About",
-            "url": "/about"
           }
         ]
       }
     ],
-
     "routes": {
       "/": {
         "title": "Home",
@@ -80,101 +64,41 @@
             "type": "page",
             "filepath": "pages/index.md",
             "title": "Home"
-          },
-          "/terms": "./pages/terms.md",
-          "/privacy": "./pages/privacy.md",
-          "/saturn-api": {
-            "type": "openapi",
-            "title": "Element API",
-            "url": "https://example.com/saturn.yaml"
           }
         }
       },
-	  "/html": {
-	    "type": "page",
-	    "filepath": "pages/example.html",
-	    "title": "HTML Page"
-	  },
-      "/earth-api": {
+      "/galaxy-api": {
         "type": "openapi",
         "title": "Element API",
-        "filepath": "api/earth.yaml",
+        "filepath": "api/galaxy.yaml",
         "icon": "earth",
         "config": {
           "some-reference": {
             "some-property": "example"
           }
         }
-      },
-      "/moon-api": {
-        "type": "openapi",
-        "title": "Element API",
-        "url": "https://example.com/moon.yaml"
-      },
-      "/sun-api": {
-        "type": "openapi",
-        "title": "Element API",
-        "slug": "sun-api",
-        "namespace": "@sun",
-        "versions": ["1.0.0"]
-      },
-      "/link": {
-        "type": "link",
-        "title": "Google",
-        "url": "https://www.google.com",
-        "icon": "earth"
-      },
-      "/about": {
-        "type": "page",
-        "filepath": "pages/about.mdx",
-        "title": "Fire",
-        "layout": {
-          "toc": false,
-          "header": false,
-          "sidebar": false,
-          "tabs": false
-        }
       }
     }
   },
   "siteConfig": {
     "customDomain": "docs.example.com",
-
     "subdomain": "exampleapi",
-
     "isPrivate": true,
-
     "layout": {
       "toc": true,
       "header": false
     },
-
     "theme": "purple",
-
     "logo": {
       "darkMode": "https://cdn.example.com/assets/logo-dark.png",
       "lightMode": "https://cdn.example.com/assets/logo-light.png"
     },
-
     "footer": {
       "filepath": "./footer.html",
-
       "html": "<p>© 2025 Example Inc. All rights reserved.</p>",
-
       "belowSidebar": true
     },
-
     "routing": {
-      "redirects": [
-        {
-          "from": "/old-path",
-          "to": "/new-path"
-        },
-        {
-          "from": "/v1",
-          "to": "/v2"
-        }
-      ]
     }
   }
 }
