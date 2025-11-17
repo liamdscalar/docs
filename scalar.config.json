@@ -72,6 +72,22 @@
     ],
 
     "routes": {
+      "/some-nested": {
+        "title": "Home",
+        "type": "group",
+        "children": {
+          "/": {
+            "type": "page",
+            "filepath": "pages/index.md",
+            "title": "Some index nested"
+          },
+          "/some-deep-nested": {
+            "type": "page",
+            "filepath": "pages/index.md",
+            "title": "Some Deep Nested"
+          }
+        }
+      },
       "/": {
         "title": "Home",
         "type": "group",
@@ -79,7 +95,10 @@
           "/": {
             "type": "page",
             "filepath": "pages/index.md",
-            "title": "Home"
+            "title": "Home",
+            "head": {
+              "scripts": [{ "path": "./js/page-specific.js" }]
+            }
           },
           "/terms": "./pages/terms.md",
           "/privacy": "./pages/privacy.md",
@@ -90,11 +109,11 @@
           }
         }
       },
-	  "/html": {
-	    "type": "page",
-	    "filepath": "pages/example.html",
-	    "title": "HTML Page"
-	  },
+      "/html": {
+        "type": "page",
+        "filepath": "pages/example.html",
+        "title": "HTML Page"
+      },
       "/earth-api": {
         "type": "openapi",
         "title": "Element API",
@@ -138,6 +157,32 @@
     }
   },
   "siteConfig": {
+    "head": {
+      "meta": [
+        { "name": "twitter:title", "content": "Your page title" },
+        {
+          "name": "Name",
+          "content": "A description of the page",
+          "id": "some-id",
+          "property": "og"
+        }
+      ],
+      "styles": [
+        { "path": "./css/test.css" },
+        { "path": "./css/another-test.css", "tagPosition": "bodyOpen" }
+      ],
+      "scripts": [
+        { "path": "./js/test.js" },
+        { "path": "./js/another-file.js", "tagPosition": "bodyClose" }
+      ],
+      "links": [
+        {
+          "rel": "icon",
+          "type": "image/x-icon",
+          "href": "https://example.com/favicon.ico"
+        }
+      ]
+    },
     "customDomain": "docs.example.com",
 
     "subdomain": "exampleapi",
