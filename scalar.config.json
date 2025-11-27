@@ -101,12 +101,7 @@
             }
           },
           "/terms": "./pages/terms.md",
-          "/privacy": "./pages/privacy.md",
-          "/saturn-api": {
-            "type": "openapi",
-            "title": "Element API",
-            "url": "https://example.com/saturn.yaml"
-          }
+          "/privacy": "./pages/privacy.md"
         }
       },
       "/html": {
@@ -125,17 +120,17 @@
           }
         }
       },
-      "/moon-api": {
+      "/zoom-livelink-api": {
         "type": "openapi",
-        "title": "Element API",
-        "url": "https://example.com/moon.yaml"
+        "title": "Zoom API Livelink",
+        "url": "https://registry.staging.scalar.com/@zoom/apis/meetings/latest?format=json"
       },
-      "/sun-api": {
+      "/scalar-test-api": {
         "type": "openapi",
-        "title": "Element API",
-        "slug": "sun-api",
-        "namespace": "@sun",
-        "versions": ["1.0.0"]
+        "title": "Demo API",
+        "slug": "test",
+        "namespace": "scalar-test",
+        "version": "1.0.0"
       },
       "/link": {
         "type": "link",
@@ -196,15 +191,10 @@
 
     "theme": "purple",
 
-    "logo": {
-      "darkMode": "https://cdn.example.com/assets/logo-dark.png",
-      "lightMode": "https://cdn.example.com/assets/logo-light.png"
-    },
+    "logo": "./file_example_PNG_500kB.png",
 
     "footer": {
       "filepath": "./footer.html",
-
-      "html": "<p>© 2025 Example Inc. All rights reserved.</p>",
 
       "belowSidebar": true
     },
