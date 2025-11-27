@@ -129,7 +129,7 @@
         "type": "openapi",
         "title": "Demo API",
         "slug": "test",
-        "namespace": "scalar-test",
+        "namespace": "scalar-0vkna",
         "version": "1.0.0"
       },
       "/link": {
