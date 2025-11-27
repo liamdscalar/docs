@@ -194,7 +194,7 @@
     "logo": "./file_example_PNG_500kB.png",
 
     "footer": {
-      "filepath": 123,
+      "filepath": "./footer.html",
 
       "belowSidebar": true
     },
