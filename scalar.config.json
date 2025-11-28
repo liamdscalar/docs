@@ -11,13 +11,6 @@
   },
 
   "publishOnMerge": true,
-
-  "components": {
-    "someSharedObject": {
-      "name": "hi"
-    }
-  },
-
   "navigation": {
     "tabs": [
       {
@@ -178,11 +171,7 @@
         }
       ]
     },
-    "customDomain": "docs.example.com",
-
-    "subdomain": "exampleapi",
-
-    "isPrivate": true,
+    "subdomain": "liams-example-docs",
 
     "layout": {
       "toc": true,
