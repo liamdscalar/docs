@@ -19,7 +19,6 @@
         "icon": "home"
       }
     ],
-
     "header": [
       {
         "title": "Home",
@@ -41,11 +40,15 @@
         ]
       }
     ],
-
     "sidebar": [
       {
         "title": "Home",
         "url": "/",
+        "icon": "homepage"
+      },
+      {
+        "title": "About",
+        "url": "/about",
         "icon": "homepage"
       },
       {
@@ -63,7 +66,6 @@
         ]
       }
     ],
-
     "routes": {
       "/some-nested": {
         "title": "Home",
@@ -121,8 +123,8 @@
       "/scalar-test-api": {
         "type": "openapi",
         "title": "Demo API",
-        "slug": "test",
-        "namespace": "scalar-0vkna",
+        "slug": "bob",
+        "namespace": "scalar-test",
         "version": "1.0.0"
       },
       "/link": {
@@ -172,11 +174,6 @@
       ]
     },
     "subdomain": "liams-example-docs",
-
-    "layout": {
-      "toc": true,
-      "header": false
-    },
 
     "theme": "purple",
 
