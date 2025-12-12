@@ -3,10 +3,10 @@ title: "Frontmatter title"
 description: "some description"
 ---
 
-# Index page
+# My docs!
 
 some content
 
 # Index page
 
-Some content updated by the CLI
+Some content updated by the

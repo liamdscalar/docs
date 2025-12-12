@@ -21,7 +21,7 @@
     ],
     "header": [
       {
-        "title": "Home",
+        "title": "Home 2",
         "url": "/",
         "icon": "home"
       },
@@ -96,7 +96,7 @@
             }
           },
           "/terms": "./pages/terms.md",
-          "/privacy": "./pages/privacy.md"
+          "/privacy": { "type": "page", "filepath": "./pages/privacy.md" }
         }
       },
       "/html": {
