@@ -1,11 +1,11 @@
 ---
-title: "Frontmatter title"
+title: "Home"
 description: "some description"
 ---
 
-# My docs!
+# Liam's test docs
 
-some content
+We are testing docs
 
 # Index page
 

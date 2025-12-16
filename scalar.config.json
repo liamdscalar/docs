@@ -1,8 +1,6 @@
 {
   "$schema": "https://cdn.scalar.com/schema/scalar-config-next.json",
   "scalar": "2.0.0",
-
-  // test comment
   "root": "./",
 
   "info": {
@@ -16,14 +14,14 @@
     "tabs": [
       {
         "title": "Home",
-        "url": "/",
+        "path": "/",
         "icon": "home"
       }
     ],
     "header": [
       {
-        "title": "Home 2",
-        "url": "/",
+        "title": "Home",
+        "path": "/",
         "icon": "home"
       },
       {
@@ -31,12 +29,8 @@
         "children": [
           {
             "title": "Element API",
-            "url": "/earth-api",
+            "path": "/earth-api",
             "icon": "earth"
-          },
-          {
-            "title": "About",
-            "url": "/about"
           }
         ]
       }
@@ -44,12 +38,7 @@
     "sidebar": [
       {
         "title": "Home",
-        "url": "/",
-        "icon": "homepage"
-      },
-      {
-        "title": "About",
-        "url": "/about",
+        "path": "/",
         "icon": "homepage"
       },
       {
@@ -57,12 +46,12 @@
         "children": [
           {
             "title": "Element API",
-            "url": "/earth-api",
+            "path": "/earth-api",
             "icon": "earth"
           },
           {
             "title": "About",
-            "url": "/about"
+            "path": "/about"
           }
         ]
       }
@@ -96,25 +85,36 @@
               "scripts": [{ "path": "./js/page-specific.js" }]
             }
           },
-          "/terms": "./pages/terms.md",
-          "/privacy": { "type": "page", "filepath": "./pages/privacy.md" }
+          "/terms": { "type": "page", "filepath": "./pages/terms.md", "title": "Terms" },
+          "/privacy": { "type": "page", "filepath": "./pages/privacy.md", "title": "Privacy" },
+          "/about": {
+            "type": "page",
+            "filepath": "pages/about.mdx",
+            "title": "Fire",
+            "layout": {
+              "toc": false,
+              "header": false,
+              "sidebar": false,
+              "tabs": false
+            }
+          },
+          "/earth-api": {
+            "type": "openapi",
+            "title": "Element API",
+            "filepath": "api/earth.yaml",
+            "icon": "earth",
+            "config": {
+              "some-reference": {
+                "some-property": "example"
+              }
+            }
+          }
         }
       },
       "/html": {
         "type": "page",
         "filepath": "pages/example.html",
         "title": "HTML Page"
-      },
-      "/earth-api": {
-        "type": "openapi",
-        "title": "Element API",
-        "filepath": "api/earth.yaml",
-        "icon": "earth",
-        "config": {
-          "some-reference": {
-            "some-property": "example"
-          }
-        }
       },
       "/zoom-livelink-api": {
         "type": "openapi",
@@ -123,7 +123,7 @@
       },
       "/scalar-test-api": {
         "type": "openapi",
-        "title": "Demo API",
+        "title": "Demo API 1",
         "slug": "bob",
         "namespace": "scalar-test",
         "version": "1.0.0"
@@ -133,17 +133,6 @@
         "title": "Google",
         "url": "https://www.google.com",
         "icon": "earth"
-      },
-      "/about": {
-        "type": "page",
-        "filepath": "pages/about.mdx",
-        "title": "Fire",
-        "layout": {
-          "toc": false,
-          "header": false,
-          "sidebar": false,
-          "tabs": false
-        }
       }
     }
   },
@@ -182,7 +171,6 @@
 
     "footer": {
       "filepath": "./footer.html",
-
       "belowSidebar": true
     },
 
