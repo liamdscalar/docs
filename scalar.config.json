@@ -121,13 +121,6 @@
         "title": "Zoom API Livelink",
         "url": "https://registry.staging.scalar.com/@zoom/apis/meetings/latest?format=json"
       },
-      "/scalar-test-api": {
-        "type": "openapi",
-        "title": "Demo API 1",
-        "slug": "bob",
-        "namespace": "scalar-test",
-        "version": "1.0.0"
-      },
       "/link": {
         "type": "link",
         "title": "Google",
