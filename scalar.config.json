@@ -1,183 +1,22 @@
 {
   "$schema": "https://cdn.scalar.com/schema/scalar-config-next.json",
   "scalar": "2.0.0",
-  "root": "./",
-
-  "info": {
-    "title": "A document",
-    "description": "A scalar docs config",
-    "version": "1.0.0"
-  },
-
-  "publishOnMerge": true,
-  "navigation": {
-    "tabs": [
-      {
-        "title": "Home",
-        "path": "/",
-        "icon": "home"
-      }
-    ],
-    "header": [
-      {
-        "title": "Home",
-        "path": "/",
-        "icon": "home"
-      },
-      {
-        "title": "APIs",
-        "children": [
-          {
-            "title": "Element API",
-            "path": "/earth-api",
-            "icon": "earth"
-          }
-        ]
-      }
-    ],
-    "sidebar": [
-      {
-        "title": "Home",
-        "path": "/",
-        "icon": "homepage"
-      },
-      {
-        "title": "APIs",
-        "children": [
-          {
-            "title": "Element API",
-            "path": "/earth-api",
-            "icon": "earth"
-          },
-          {
-            "title": "About",
-            "path": "/about"
-          }
-        ]
-      }
-    ],
-    "routes": {
-      "/some-nested": {
-        "title": "Home",
-        "type": "group",
-        "children": {
-          "/": {
-            "type": "page",
-            "filepath": "pages/index.md",
-            "title": "Some index nested"
-          },
-          "/some-deep-nested": {
-            "type": "page",
-            "filepath": "pages/index.md",
-            "title": "Some Deep Nested"
-          }
-        }
-      },
-      "/": {
-        "title": "Home",
-        "type": "group",
-        "children": {
-          "/": {
-            "type": "page",
-            "filepath": "pages/index.md",
-            "title": "Home",
-            "head": {
-              "scripts": [{ "path": "./js/page-specific.js" }]
-            }
-          },
-          "/terms": { "type": "page", "filepath": "./pages/terms.md", "title": "Terms" },
-          "/privacy": { "type": "page", "filepath": "./pages/privacy.md", "title": "Privacy" },
-          "/about": {
-            "type": "page",
-            "filepath": "pages/about.mdx",
-            "title": "Fire",
-            "layout": {
-              "toc": false,
-              "header": false,
-              "sidebar": false,
-              "tabs": false
-            }
-          },
-          "/earth-api": {
-            "type": "openapi",
-            "title": "Element API",
-            "filepath": "api/earth.yaml",
-            "icon": "earth",
-            "config": {
-              "some-reference": {
-                "some-property": "example"
-              }
-            }
-          }
-        }
-      },
-      "/html": {
-        "type": "page",
-        "filepath": "pages/example.html",
-        "title": "HTML Page"
-      },
-      "/zoom-livelink-api": {
-        "type": "openapi",
-        "title": "Zoom API Livelink",
-        "url": "https://registry.staging.scalar.com/@zoom/apis/meetings/latest?format=json"
-      },
-      "/link": {
-        "type": "link",
-        "title": "Google",
-        "url": "https://www.google.com",
-        "icon": "earth"
-      }
+  "siteConfig": {
+    "footer": {
+      "filepath": "footer.html"
     }
   },
-  "siteConfig": {
-    "head": {
-      "meta": [
-        { "name": "twitter:title", "content": "Your page title" },
-        {
-          "name": "Name",
-          "content": "A description of the page",
-          "id": "some-id",
-          "property": "og"
+  "subdomain": "playground",
+  "navigation": {
+    "routes": {
+      "/": {
+        "type": "group",
+        "title": "Root",
+        "children": {
+          "/": "index.md",
+          "/bob": "index-2.md"
         }
-      ],
-      "styles": [
-        { "path": "./css/test.css" },
-        { "path": "./css/another-test.css", "tagPosition": "bodyOpen" }
-      ],
-      "scripts": [
-        { "path": "./js/test.js" },
-        { "path": "./js/another-file.js", "tagPosition": "bodyClose" }
-      ],
-      "links": [
-        {
-          "rel": "icon",
-          "type": "image/x-icon",
-          "href": "https://example.com/favicon.ico"
-        }
-      ]
-    },
-    "subdomain": "liams-example-docs",
-
-    "theme": "purple",
-
-    "logo": "./file_example_PNG_500kB.png",
-
-    "footer": {
-      "filepath": "./footer.html",
-      "belowSidebar": true
-    },
-
-    "routing": {
-      "redirects": [
-        {
-          "from": "/old-path",
-          "to": "/new-path"
-        },
-        {
-          "from": "/v1",
-          "to": "/v2"
-        }
-      ]
+      }
     }
   }
 }
